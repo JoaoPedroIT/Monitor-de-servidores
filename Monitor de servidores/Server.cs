@@ -21,7 +21,7 @@ namespace Monitor_de_servidores
             Maintenance
         }
 
-        public class Server
+        public class Servers
         {
             public int ID { get; set; }
             public string Name { get; set; }
