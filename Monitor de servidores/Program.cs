@@ -82,3 +82,9 @@ var criticalServers = servers
     .Where(s => s.CpuUsage > 80 || s.MemoryUsage > 85)
     .ToList();
 
+var tasks = servers.Select(server => CheckServer(server));
+await Task.WhenAll(tasks);
+static async Task CheckServer(Server server)
+{
+    await Task.Delay(500);
+}
